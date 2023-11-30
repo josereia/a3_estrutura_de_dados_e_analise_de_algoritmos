@@ -36,8 +36,8 @@ project(orion_airlines
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 file(GLOB_RECURSE HEADERS "src/*.hpp")
 add_executable(orion_airlines ${SOURCES} ${HEADERS})
-target_include_directories(orion_airlines PRIVATE src)
 target_compile_features(orion_airlines PRIVATE cxx_std_20)
+target_include_directories(orion_airlines PRIVATE src)
 
 # SQLite
 target_sources(orion_airlines PRIVATE ${CMAKE_BINARY_DIR}/_deps/sqlite-src/sqlite3.h)
