@@ -1,8 +1,9 @@
 #include <iostream>
+#include <modules/auth/auth_module.hpp>
 
 int main(void) {
-  printf("Hello World!\n");
-  
+  AuthPresentation::main();
+
   exit(EXIT_SUCCESS);
   return EXIT_SUCCESS;
 }

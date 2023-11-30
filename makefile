@@ -1,4 +1,4 @@
-.PHONY: default run
+.PHONY: default run build clean
 
 # vars
 APP_NAME=orion_airlines
@@ -12,7 +12,7 @@ run:
 build:
 	@echo "Building the application"
 	@mkdir -p build
-	@cd build && cmake .. && make -j
+	@cd build && cmake .. && make -j 
 
 clean:
 	@echo "Cleaning the application"
