@@ -4,10 +4,9 @@ using namespace std;
 
 struct flight_entity {
   int id;
-  string airplane;
-  string outgoing_address;
+  int airplane_id;
+  string departure_address;
   string destination_address;
-  int checkin_time;
-  int checkout_time;
-  int passengers;
+  int departure_date;
+  int arrival_date;
 };

@@ -5,11 +5,11 @@ using namespace std;
 struct airplane_entity {
   int id;
   string model;
-  string producer;
-  int passengers;
-  float lenght;
+  string manufacturer;
+  int capacity;
+  float length;
   float height;
-  float velocity;
+  float speed;
   float altitude;
   float engine;
 };

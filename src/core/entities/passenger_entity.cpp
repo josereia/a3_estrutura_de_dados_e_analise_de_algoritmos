@@ -6,6 +6,8 @@ struct customer_entity {
   int id;
   string name;
   string cpf;
+  string passport;
+  int birth_date;
   string email;
   string phone;
 };

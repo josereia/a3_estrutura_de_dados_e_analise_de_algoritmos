@@ -1,7 +1,9 @@
 {
   "cSpell.words": [
+    "AUTOINCREMENT",
     "ftxui",
-    "hbox"
+    "hbox",
+    "orion"
   ],
   "files.associations": {
     "__bit_reference": "cpp",
@@ -65,7 +67,9 @@
     "unordered_map": "cpp",
     "variant": "cpp",
     "vector": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "fstream": "cpp",
+    "iomanip": "cpp"
   },
   "C_Cpp.errorSquiggles": "enabled"
 }
