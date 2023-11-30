@@ -1,7 +1,7 @@
-#include <modules/manager/manager_module.hpp>
-#include <string>
 #include "ftxui/component/component.hpp"
 #include "ftxui/component/screen_interactive.hpp"
+
+#include <modules/manager/manager_module.hpp>
 
 using namespace std;
 using namespace ftxui;

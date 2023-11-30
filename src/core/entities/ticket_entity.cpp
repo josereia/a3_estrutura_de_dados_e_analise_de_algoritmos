@@ -3,9 +3,10 @@
 using namespace std;
 
 struct ticket_entity {
-  string id;
+  int id;
   string flight;
-  time_t shipping_date;
-  time_t boarding_time;
   string boarding_gate;
+  int boarding_time;
+  string seat;
+  int baggage;
 };

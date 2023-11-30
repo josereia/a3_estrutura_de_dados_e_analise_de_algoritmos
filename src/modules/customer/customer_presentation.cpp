@@ -6,14 +6,13 @@
 using namespace std;
 using namespace ftxui;
 
-namespace FlightPresentation {
+namespace CustomerPresentation {
 Component main() {
   auto layout = Container::Vertical({});
 
   auto renderer = Renderer(layout, [] {
     vector<string> table_header = {
-        "Id",      "Avião",    "Origem",      "Destino",
-        "Checkin", "Checkout", "Passageiros",
+        "Id", "Nome", "CPF", "Email", "Telefone",
     };
     auto table = TableComponent::main({{}}, table_header);
 
@@ -22,4 +21,4 @@ Component main() {
 
   return renderer;
 }
-}  // namespace FlightPresentation
+}  // namespace CustomerPresentation

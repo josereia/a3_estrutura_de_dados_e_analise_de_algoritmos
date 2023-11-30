@@ -1,5 +1,5 @@
 #include <ftxui/dom/table.hpp>
-#include <vector>
+
 #include "ftxui/component/component.hpp"
 #include "ftxui/component/screen_interactive.hpp"
 

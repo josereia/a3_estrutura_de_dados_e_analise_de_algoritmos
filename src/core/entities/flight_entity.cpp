@@ -3,11 +3,11 @@
 using namespace std;
 
 struct flight_entity {
-  string id;
+  int id;
   string airplane;
-  string destination_address;
   string outgoing_address;
-  time_t checkin_time;
-  time_t checkout_time;
+  string destination_address;
+  int checkin_time;
+  int checkout_time;
   int passengers;
 };

@@ -3,7 +3,7 @@
 using namespace std;
 
 struct airplane_entity {
-  string id;
+  int id;
   string model;
   string producer;
   int passengers;

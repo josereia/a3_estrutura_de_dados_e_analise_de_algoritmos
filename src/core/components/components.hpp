@@ -1,7 +1,7 @@
 #ifndef components
 #define components
 
-#include <vector>
+
 #include "ftxui/component/component.hpp"
 
 using namespace std;
