@@ -1,3 +1,5 @@
+#include <modules/airplane/airplane_module.hpp>
+#include <modules/flight/flight_module.hpp>
 #include <string>
 #include <vector>
 #include "ftxui/component/component.hpp"
@@ -14,7 +16,12 @@ void main() {
   vector<string> tabs = {"Voos", "Aeronaves", "Aeroportos", "Relatórios"};
 
   auto toggle = Toggle(&tabs, &selected);
-  auto container = Container::Tab({}, &selected);
+  auto container = Container::Tab(
+      {
+          FlightPresentation::main(),
+          AirplanePresentation::main(),
+      },
+      &selected);
 
   auto layout = Container::Vertical({
       toggle,

@@ -5,16 +5,20 @@
 using namespace std;
 using namespace ftxui;
 
-namespace FlightPresentation {
+namespace AirplanePresentation {
 Component main() {
   auto layout = Container::Vertical({});
 
   auto renderer = Renderer(layout, [] {
-    auto table = TableComponent::main({{}}, {""});
+    vector<string> table_header = {
+        "Modelo", "Fabricante", "Passageiros", "Comprimento",
+        "Altura", "Velocidade", "Altitude",    "Motor",
+    };
+    auto table = TableComponent::main({{}}, table_header);
 
     return vbox({flex_grow(table | frame)});
   });
 
   return renderer;
 }
-}  // namespace FlightPresentation
+}  // namespace AirplanePresentation

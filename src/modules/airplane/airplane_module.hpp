@@ -1,11 +1,11 @@
-#ifndef flight_module
-#define flight_module
+#ifndef airplane_module
+#define airplane_module
 
 #include "ftxui/component/component.hpp"
 
 using namespace ftxui;
 
-namespace FlightPresentation {
+namespace AirplanePresentation {
 Component main();
 }
 
