@@ -28,7 +28,7 @@ struct passenger_entity {
   std::string name;
   std::string cpf;
   std::string passport;
-  int birth_date;
+  std::string birth_date;
   std::string email;
   std::string phone;
 };
