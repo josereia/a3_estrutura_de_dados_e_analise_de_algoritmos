@@ -1,5 +1,6 @@
+#include <core/components/components.hpp>
+#include <core/utils/utils.hpp>
 #include <ftxui/dom/table.hpp>
-
 #include "ftxui/component/component.hpp"
 #include "ftxui/component/screen_interactive.hpp"
 
@@ -7,8 +8,11 @@ using namespace std;
 using namespace ftxui;
 
 namespace TableComponent {
+vector<vector<string>> filtered;
+
 Element main(vector<vector<string>> data, vector<string> header) {
   data.insert(data.begin(), {header});
+
   auto table = Table(data);
 
   table.SelectAll().Border(LIGHT);

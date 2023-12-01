@@ -2,6 +2,7 @@
 
 using namespace std;
 
+namespace Entities {
 struct airplane_entity {
   int id;
   string model;
@@ -13,3 +14,4 @@ struct airplane_entity {
   float altitude;
   float engine;
 };
+}  // namespace Entities

@@ -1,4 +1,4 @@
-CREATE TABLE airplane (
+CREATE TABLE airplanes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     model TEXT NOT NULL,
     manufacturer TEXT NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE passengers (
     passport TEXT NOT NULL UNIQUE,
     birth_date DATE NOT NULL,
     email TEXT NOT NULL,
-    phone TEXT NOT NULL,
+    phone TEXT NOT NULL
 );
 
 CREATE TABLE flights (
@@ -38,5 +38,5 @@ CREATE TABLE tickets (
     boarding_gate INTEGER,
     seat TEXT,
     FOREIGN KEY (flight_id) REFERENCES flights(id),
-    FOREIGN KEY (passenger_id) REFERENCES passengers(passenger_id),
+    FOREIGN KEY (passenger_id) REFERENCES passengers(passenger_id)
 );

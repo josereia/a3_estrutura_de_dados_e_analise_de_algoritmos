@@ -2,7 +2,7 @@
 #include "ftxui/component/screen_interactive.hpp"
 
 #include <modules/airplane/airplane_module.hpp>
-#include <modules/customer/customer_module.hpp>
+#include <modules/passenger/passenger_module.hpp>
 #include <modules/flight/flight_module.hpp>
 #include <modules/ticket/ticket_module.hpp>
 
@@ -14,7 +14,7 @@ auto screen = ScreenInteractive::Fullscreen();
 
 void main() {
   int selected = 0;
-  vector<string> tabs = {"Voos", "Aeronaves", "Passagens", "Clientes"};
+  vector<string> tabs = {"Voos", "Aeronaves", "Passagens", "Passageiros"};
 
   auto toggle = Toggle(&tabs, &selected);
   auto container = Container::Tab(
@@ -22,7 +22,7 @@ void main() {
           FlightPresentation::main(),
           AirplanePresentation::main(),
           TicketPresentation::main(),
-          CustomerPresentation::main(),
+          PassengerPresentation::main(),
       },
       &selected);
 
@@ -31,7 +31,7 @@ void main() {
       container,
   });
 
-  auto renderer = Renderer(layout, [&] {
+  auto renderer = Renderer(layout, [toggle, container] {
     return vbox({
         toggle->Render(),
         separator(),

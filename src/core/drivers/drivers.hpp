@@ -5,15 +5,15 @@
 #include <fstream>
 #include <string>
 
-using namespace std;
-
 namespace DatabaseDriver {
-void init(sqlite3** db, string path);
-}
+void init(sqlite3** db);
+std::vector<std::vector<std::string>> query(std::string query,
+                                            std::vector<std::string> bindings);
+}  // namespace DatabaseDriver
 
 namespace StorageDriver {
-ifstream open_file(string path);
-string read_file(string path);
+std::ifstream open_file(std::string path);
+std::string read_file(std::string path);
 }  // namespace StorageDriver
 
 #endif

@@ -1,13 +1,13 @@
 #include <core/components/components.hpp>
 #include <core/utils/utils.hpp>
-#include "flight_module.hpp"
 #include "ftxui/component/component.hpp"
 #include "ftxui/component/screen_interactive.hpp"
+#include "passenger_module.hpp"
 
 using namespace std;
 using namespace ftxui;
 
-namespace FlightPresentation {
+namespace PassengerPresentation {
 string search;
 bool create_modal_shown = false;
 bool update_modal_shown = false;
@@ -16,11 +16,11 @@ bool delete_modal_shown = false;
 vector<vector<string>> filtered = {};
 
 Component main() {
-  vector<vector<string>> airplanes = FlightRepository::get_all();
+  vector<vector<string>> airplanes = PassengerRepository::get_all();
   filtered = airplanes;
 
   auto search_input = InputComponent::main(
-      &search, "Busque por voos",
+      &search, "Busque por passageiros",
       {
           .multiline = false,
           .on_change =
@@ -43,8 +43,8 @@ Component main() {
   auto renderer = Renderer(
       layout, [search_input, new_button, update_button, delete_button] {
         vector<string> table_header = {
-            "Id",     "Aeronave", "Data de embarque", "Data de chegada",
-            "Origem", "Destino",
+            "Id",    "Nome",     "CPF", "Passaporte", "Data de nascimento",
+            "Email", "Telefone",
         };
         auto table = TableComponent::main(filtered, table_header);
 
@@ -62,4 +62,4 @@ Component main() {
 
   return renderer;
 }
-}  // namespace FlightPresentation
+}  // namespace PassengerPresentation

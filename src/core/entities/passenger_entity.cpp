@@ -2,7 +2,8 @@
 
 using namespace std;
 
-struct customer_entity {
+namespace Entities {
+struct passenger_entity {
   int id;
   string name;
   string cpf;
@@ -11,3 +12,4 @@ struct customer_entity {
   string email;
   string phone;
 };
+}  // namespace Entities

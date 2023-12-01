@@ -2,6 +2,7 @@
 
 using namespace std;
 
+namespace Entities {
 struct flight_entity {
   int id;
   int airplane_id;
@@ -10,3 +11,5 @@ struct flight_entity {
   int departure_date;
   int arrival_date;
 };
+
+}  // namespace Entities
