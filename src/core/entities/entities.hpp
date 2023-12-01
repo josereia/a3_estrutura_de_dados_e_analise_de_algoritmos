@@ -36,8 +36,8 @@ struct ticket_entity {
   int id;
   int flight_id;
   int passenger_id;
-  int boarding_date;
-  int boarding_gate;
+  std::string boarding_date;
+  std::string boarding_gate;
   std::string seat;
 };
 }  // namespace Entities

@@ -35,8 +35,8 @@ CREATE TABLE tickets (
     flight_id INTEGER,
     passenger_id INTEGER,
     boarding_date DATE,
-    boarding_gate INTEGER,
+    boarding_gate TEXT,
     seat TEXT,
     FOREIGN KEY (flight_id) REFERENCES flights(id),
-    FOREIGN KEY (passenger_id) REFERENCES passengers(passenger_id)
+    FOREIGN KEY (passenger_id) REFERENCES passengers(id)
 );

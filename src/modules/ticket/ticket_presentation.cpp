@@ -15,6 +15,17 @@ bool delete_modal_shown = false;
 
 vector<vector<string>> filtered = {};
 
+void on_cancel() {
+  create_modal_shown = false;
+  update_modal_shown = false;
+  delete_modal_shown = false;
+}
+
+void on_update() {
+  auto tickets = TicketRepository::get_all();
+  filtered = tickets;
+}
+
 Component main() {
   vector<vector<string>> airplanes = TicketRepository::get_all();
   filtered = airplanes;
@@ -63,6 +74,15 @@ Component main() {
             flex_grow(table | frame),
         });
       });
+
+  renderer |= Modal(TicketComponents::CreateModal::main(on_cancel, on_update),
+                    &create_modal_shown);
+
+  renderer |= Modal(TicketComponents::UpdateModal::main(on_cancel, on_update),
+                    &update_modal_shown);
+
+  renderer |= Modal(TicketComponents::DeleteModal::main(on_cancel, on_update),
+                    &delete_modal_shown);
 
   return renderer;
 }

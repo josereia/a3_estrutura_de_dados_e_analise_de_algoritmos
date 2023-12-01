@@ -15,6 +15,7 @@ namespace DeleteModal {
 ftxui::Component main(void (*on_cancel)(), void (*on_delete)());
 }
 }  // namespace PassengerComponents
+
 namespace PassengerPresentation {
 ftxui::Component main();
 }
