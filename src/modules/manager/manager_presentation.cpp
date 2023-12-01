@@ -1,10 +1,10 @@
+#include <core/components/components.hpp>
+#include <modules/airplane/airplane_module.hpp>
+#include <modules/flight/flight_module.hpp>
+#include <modules/passenger/passenger_module.hpp>
+#include <modules/ticket/ticket_module.hpp>
 #include "ftxui/component/component.hpp"
 #include "ftxui/component/screen_interactive.hpp"
-
-#include <modules/airplane/airplane_module.hpp>
-#include <modules/passenger/passenger_module.hpp>
-#include <modules/flight/flight_module.hpp>
-#include <modules/ticket/ticket_module.hpp>
 
 using namespace std;
 using namespace ftxui;
@@ -33,9 +33,11 @@ void main() {
 
   auto renderer = Renderer(layout, [toggle, container] {
     return vbox({
-        toggle->Render(),
-        separator(),
+        text("Orion Airlines") | bold,
+        toggle->Render() | border,
         container->Render(),
+        filler(),
+        FooterComponent::main(),
     });
   });
 

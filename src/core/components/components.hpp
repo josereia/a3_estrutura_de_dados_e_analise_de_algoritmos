@@ -20,4 +20,8 @@ ftxui::Element main(std::vector<std::vector<std::string>> data,
                     std::vector<std::string> header);
 }
 
+namespace FooterComponent {
+ftxui::Element main();
+}
+
 #endif

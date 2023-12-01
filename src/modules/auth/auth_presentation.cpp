@@ -1,7 +1,7 @@
+#include <core/components/components.hpp>
+#include <modules/manager/manager_module.hpp>
 #include "ftxui/component/component.hpp"
 #include "ftxui/component/screen_interactive.hpp"
-
-#include <modules/manager/manager_module.hpp>
 
 using namespace std;
 using namespace ftxui;
@@ -21,8 +21,11 @@ void main() {
   string username;
   string password;
 
-  auto username_input = Input(&username, "Digite seu usuário");
-  auto password_input = Input(&password, "Digite sua senha");
+  auto input_option = InputOption{.multiline = false};
+  auto username_input =
+      InputComponent::main(&username, "Digite seu usuário", input_option);
+  auto password_input =
+      InputComponent::main(&password, "Digite sua senha", input_option);
 
   auto login_button = Button("Entrar", [&] { login(&username, &password); });
 
@@ -34,13 +37,18 @@ void main() {
 
   auto renderer = Renderer(layout, [&] {
     return vbox({
-        vbox(text("Orion Airlines") | bold,
-             text("Faça login para acessar o sistema.")),
-        separator(),
-        vbox(text("Nome de usuário: "), username_input->Render() | border),
-        vbox(text("Senha: "), password_input->Render() | border),
-        separatorEmpty(),
-        login_button->Render() | center,
+        text("Orion Airlines") | bold,
+        text("Faça login para acessar o sistema.") | border,
+        filler(),
+        vbox({
+            vbox(text("Nome de usuário: "), username_input->Render()),
+            vbox(text("Senha: "), password_input->Render()),
+            separatorEmpty(),
+            login_button->Render() | center,
+        }) | border |
+            center,
+        filler(),
+        FooterComponent::main(),
     });
   });
 
