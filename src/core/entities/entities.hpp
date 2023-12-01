@@ -13,7 +13,7 @@ struct airplane_entity {
   float height;
   float speed;
   float altitude;
-  float engine;
+  std::string engine;
 };
 struct flight_entity {
   int id;

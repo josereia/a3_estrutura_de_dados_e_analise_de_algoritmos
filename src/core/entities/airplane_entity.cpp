@@ -12,6 +12,6 @@ struct airplane_entity {
   float height;
   float speed;
   float altitude;
-  float engine;
+  string engine;
 };
 }  // namespace Entities
