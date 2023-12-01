@@ -27,7 +27,7 @@ CREATE TABLE flights (
     arrival_date DATE,
     departure_address TEXT,
     destination_address TEXT,
-    FOREIGN KEY (airplane_id) REFERENCES airplane(id)
+    FOREIGN KEY (airplane_id) REFERENCES airplanes(id)
 );
 
 CREATE TABLE tickets (

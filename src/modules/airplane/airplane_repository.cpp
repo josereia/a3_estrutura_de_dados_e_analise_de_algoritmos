@@ -8,11 +8,16 @@ using namespace std;
 using namespace Entities;
 
 namespace AirplaneRepository {
+/// @brief get all airplanes from database
+/// @return vector of vector of strings
 vector<vector<string>> get_all() {
   auto airplanes = DatabaseDriver::query("SELECT * FROM airplanes", {});
   return airplanes;
 }
 
+/// @brief get one airplane by id
+/// @param id id of the airplane
+/// @return pointer to airplane entity
 airplane_entity* get_one_by_id(int id) {
   auto query = "SELECT * FROM airplanes WHERE id = ?";
   auto params = vector<string>{to_string(id)};
@@ -37,6 +42,8 @@ airplane_entity* get_one_by_id(int id) {
   return airplane;
 }
 
+/// @brief create a new airplane from entity
+/// @param entity pointer to airplane entity
 void create(airplane_entity* entity) {
   auto query =
       "INSERT INTO airplanes (model, manufacturer, capacity, length, "
@@ -57,6 +64,9 @@ void create(airplane_entity* entity) {
   DatabaseDriver::query(query, params);
 }
 
+/// @brief update airplane from entity
+/// @param id id of the airplane
+/// @param entity pointer to airplane entity
 void update(int id, airplane_entity* entity) {
   auto query =
       "UPDATE airplanes SET model = ?, manufacturer = ?, capacity = ?, "
@@ -78,11 +88,11 @@ void update(int id, airplane_entity* entity) {
   DatabaseDriver::query(query, params);
 }
 
+/// @brief remove airplane from database
+/// @param id id of the airplane
 void remove(int id) {
   auto query = "DELETE FROM airplanes WHERE id = ?";
-  auto params = vector<string>{
-      to_string(id),
-  };
+  auto params = vector<string>{to_string(id)};
 
   DatabaseDriver::query(query, params);
 }

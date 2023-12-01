@@ -18,10 +18,10 @@ struct airplane_entity {
 struct flight_entity {
   int id;
   int airplane_id;
+  std::string departure_date;
+  std::string arrival_date;
   std::string departure_address;
   std::string destination_address;
-  int departure_date;
-  int arrival_date;
 };
 struct passenger_entity {
   int id;
