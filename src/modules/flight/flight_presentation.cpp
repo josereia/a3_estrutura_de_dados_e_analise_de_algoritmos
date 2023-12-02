@@ -31,7 +31,7 @@ Component main() {
   filtered = flights;
 
   auto search_input = InputComponent::main(
-      &search, "Busque por voos",
+      &search, "Busque por vôos",
       {
           .multiline = false,
           .on_change = [flights] { filtered = Utils::filter(flights, search); },

@@ -14,7 +14,7 @@ auto screen = ScreenInteractive::Fullscreen();
 
 void main() {
   int selected = 0;
-  vector<string> tabs = {"Voos", "Aeronaves", "Passagens", "Passageiros"};
+  vector<string> tabs = {"Vôos", "Aeronaves", "Passagens", "Passageiros"};
 
   auto toggle = Toggle(&tabs, &selected);
   auto container = Container::Tab(
