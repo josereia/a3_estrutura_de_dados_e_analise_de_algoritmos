@@ -61,6 +61,7 @@ Component main() {
             "Data de embarque",
             "Portão de embarque",
             "Assento",
+            "Bagagem(Kg)",
         };
         auto table = TableComponent::main(filtered, table_header);
 

@@ -13,9 +13,10 @@ namespace TicketRepository {
 vector<vector<string>> get_all() {
   auto query =
       "SELECT t.id, t.flight_id, t.passenger_id, p.name, t.boarding_date, "
-      "t.boarding_gate, t.seat FROM tickets AS t JOIN passengers AS p WHERE "
+      "t.boarding_gate, t.seat, sum(l.weight) AS luggages FROM tickets AS t "
+      "JOIN passengers AS p ON "
       "t.passenger_id = "
-      "p.id";
+      "p.id JOIN luggages AS l ON l.ticket_id = t.id GROUP BY t.passenger_id";
 
   auto tickets = DatabaseDriver::query(query, {});
   return tickets;
