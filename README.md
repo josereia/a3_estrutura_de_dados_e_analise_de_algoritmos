@@ -50,8 +50,16 @@ make run
 
 ![login screen](./assets/login.png/)
 
+![flights screen](./assets/flights.png/)
 
-![home screen](./assets/home.png/)
+![airplanes screen](./assets/airplanes.png/)
 
+![tickets screen](./assets/tickets.png/)
 
-![popup](./assets/popup.png/)
+![passengers screen](./assets/passengers.png/)
+
+![create popup](./assets/create_popup.png/)
+
+![update popup](./assets/update_popup.png/)
+
+![delete popup](./assets/delete_popup.png/)
