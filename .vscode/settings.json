@@ -4,8 +4,12 @@
     "ftxui",
     "hbox",
     "Kg",
+    "libfl",
+    "libsqlite",
     "Maffei",
-    "orion"
+    "openssh",
+    "orion",
+    "xcode"
   ],
   "files.associations": {
     "__bit_reference": "cpp",

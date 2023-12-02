@@ -26,7 +26,7 @@ brew install openssh make cmake
 ```
 
 **Compilando:**
-O executável da aplicação estará disponível no seguinte caminho: ./buid/orion_airlines
+O executável da aplicação estará disponível no seguinte caminho: ./build/orion_airlines
 
 ```console
 make build
@@ -47,6 +47,7 @@ make run
 ```
 
 ## Imagens
+
 ![login screen](./assets/login.png/)
 ![home screen](./assets/home.png/)
 ![popup](./assets/popup.png/)
