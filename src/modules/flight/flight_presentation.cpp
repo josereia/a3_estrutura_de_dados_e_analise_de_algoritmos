@@ -53,8 +53,13 @@ Component main() {
   auto renderer = Renderer(
       layout, [search_input, new_button, update_button, delete_button] {
         vector<string> table_header = {
-            "Id",     "Aeronave", "Data de embarque", "Data de chegada",
-            "Origem", "Destino",
+            "Id",
+            "Id da aeronave",
+            "Modelo da aeronave",
+            "Data de embarque",
+            "Data de chegada",
+            "Origem",
+            "Destino",
         };
         auto table = TableComponent::main(filtered, table_header);
 

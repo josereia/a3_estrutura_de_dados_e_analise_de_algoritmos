@@ -11,7 +11,14 @@ namespace FlightRepository {
 /// @brief get all flights from database
 /// @return vector of vector of strings
 vector<vector<string>> get_all() {
-  auto flights = DatabaseDriver::query("SELECT * FROM flights", {});
+  auto query =
+      "SELECT f.id, f.airplane_id, a.model, f.departure_date, f.arrival_date, "
+      "f.departure_address, f.destination_address FROM flights AS f JOIN "
+      "airplanes AS a ON "
+      "f.airplane_id = "
+      "a.id";
+
+  auto flights = DatabaseDriver::query(query, {});
   return flights;
 }
 
