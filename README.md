@@ -58,6 +58,8 @@ make run
 
 ![passengers screen](./assets/passengers.png/)
 
+![luggages screen](./assets/luggages.png/)
+
 ![create popup](./assets/create_popup.png/)
 
 ![update popup](./assets/update_popup.png/)
