@@ -1,6 +1,7 @@
 #include <sqlite3.h>
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include <core/drivers/drivers.hpp>
 

@@ -4,6 +4,7 @@
 #include <sqlite3.h>
 #include <fstream>
 #include <string>
+#include <vector>
 
 namespace DatabaseDriver {
 void init(sqlite3** db);
