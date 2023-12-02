@@ -10,10 +10,38 @@ Projeto A3 da UC Estrutura de dados e Análise de Algoritmos.
 
 ## Como compilar
 
+**Instalando as dependências:**
+
 ### Linux
 
-Instalando as dependências:
-
 ```bash
-sudo apt install build-essential libfl-dev cmake make
+sudo apt install build-essential libssl-dev libfl-dev libsqlite3-dev make cmake
+```
+
+### MacOS
+
+```zsh
+xcode-select --install
+brew install openssh make cmake 
+```
+
+**Compilando:**
+O executável da aplicação estará disponível no seguinte caminho: ./buid/orion_airlines
+
+```console
+make build
+```
+
+## Como executar
+
+**Modo manual:**
+
+```console
+./build/orion_airlines
+```
+
+**Usando o makefile:**
+
+```console
+make run
 ```
