@@ -55,8 +55,9 @@ Component main() {
       layout, [search_input, new_button, update_button, delete_button] {
         vector<string> table_header = {
             "Id",
-            "Voo",
-            "Passageiro",
+            "Id do voo",
+            "Id do passageiro",
+            "Nome do passageiro",
             "Data de embarque",
             "Portão de embarque",
             "Assento",

@@ -11,7 +11,13 @@ namespace TicketRepository {
 /// @brief get all tickets from database
 /// @return vector of vector of strings
 vector<vector<string>> get_all() {
-  auto tickets = DatabaseDriver::query("SELECT * FROM tickets", {});
+  auto query =
+      "SELECT t.id, t.flight_id, t.passenger_id, p.name, t.boarding_date, "
+      "t.boarding_gate, t.seat FROM tickets AS t JOIN passengers AS p WHERE "
+      "t.passenger_id = "
+      "p.id";
+
+  auto tickets = DatabaseDriver::query(query, {});
   return tickets;
 }
 
