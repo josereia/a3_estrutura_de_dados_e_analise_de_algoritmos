@@ -7,6 +7,7 @@ using namespace std;
 namespace Utils {
 vector<vector<string>> filter(vector<vector<string>> data, string filter) {
   vector<vector<string>> filtered;
+
   for (auto row : data) {
     for (auto cell : row) {
       if (cell.find(filter) != string::npos) {

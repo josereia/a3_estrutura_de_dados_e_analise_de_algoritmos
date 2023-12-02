@@ -3,10 +3,10 @@ CREATE TABLE airplanes (
     model TEXT NOT NULL,
     manufacturer TEXT NOT NULL,
     capacity INTEGER,
-    length REAL,
-    height REAL,
-    speed REAL,
-    altitude REAL,
+    length REAL(10,2),
+    height REAL(10,2),
+    speed REAL(10,2),
+    altitude REAL(10,2),
     engine TEXT
 );
 
