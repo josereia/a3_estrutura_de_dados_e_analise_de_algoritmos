@@ -117,3 +117,41 @@ VALUES
     'Y22',
     'A22'
   );
+
+INSERT
+  OR IGNORE INTO luggages(
+    id,
+    ticket_id,
+    type,
+    description,
+    weight
+  )
+VALUES
+  (
+    1,
+    1,
+    'Bagagem de mão',
+    'Mala de mão com roupas',
+    10.5
+  ),
+  (
+    2,
+    1,
+    'Bagagem de mão',
+    'Mochila com notebook',
+    2.5
+  ),
+  (
+    3,
+    2,
+    'Bagagem de mão',
+    'Mala de mão com roupas',
+    10.5
+  ),
+  (
+    4,
+    2,
+    'Bagagem de mão',
+    'Mochila com notebook',
+    2.5
+  );

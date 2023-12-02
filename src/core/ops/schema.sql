@@ -3,10 +3,10 @@ CREATE TABLE airplanes (
     model TEXT NOT NULL,
     manufacturer TEXT NOT NULL,
     capacity INTEGER,
-    length REAL(10,2),
-    height REAL(10,2),
-    speed REAL(10,2),
-    altitude REAL(10,2),
+    length REAL(10, 2),
+    height REAL(10, 2),
+    speed REAL(10, 2),
+    altitude REAL(10, 2),
     engine TEXT
 );
 
@@ -39,4 +39,13 @@ CREATE TABLE tickets (
     seat TEXT,
     FOREIGN KEY (flight_id) REFERENCES flights(id),
     FOREIGN KEY (passenger_id) REFERENCES passengers(id)
+);
+
+CREATE TABLE luggages (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ticket_id INTEGER,
+    type TEXT,
+    description TEXT,
+    weight REAL(10, 2),
+    FOREIGN KEY (ticket_id) REFERENCES tickets(id)
 );

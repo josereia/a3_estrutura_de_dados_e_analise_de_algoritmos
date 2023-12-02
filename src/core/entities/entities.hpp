@@ -40,6 +40,13 @@ struct ticket_entity {
   std::string boarding_gate;
   std::string seat;
 };
+struct luggage_entity {
+  int id;
+  int ticket_id;
+  std::string type;
+  std::string description;
+  float weight;
+};
 }  // namespace Entities
 
 #endif

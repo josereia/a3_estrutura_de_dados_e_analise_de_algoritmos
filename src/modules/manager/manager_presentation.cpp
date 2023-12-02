@@ -1,6 +1,7 @@
 #include <core/components/components.hpp>
 #include <modules/airplane/airplane_module.hpp>
 #include <modules/flight/flight_module.hpp>
+#include <modules/luggage/luggage_module.hpp>
 #include <modules/passenger/passenger_module.hpp>
 #include <modules/ticket/ticket_module.hpp>
 #include "ftxui/component/component.hpp"
@@ -14,7 +15,8 @@ auto screen = ScreenInteractive::Fullscreen();
 
 void main() {
   int selected = 0;
-  vector<string> tabs = {"Vôos", "Aeronaves", "Passagens", "Passageiros"};
+  vector<string> tabs = {"Vôos", "Aeronaves", "Passagens", "Passageiros",
+                         "Bagagens"};
 
   auto toggle = Toggle(&tabs, &selected);
   auto container = Container::Tab(
@@ -23,6 +25,7 @@ void main() {
           AirplanePresentation::main(),
           TicketPresentation::main(),
           PassengerPresentation::main(),
+          LuggagePresentation::main(),
       },
       &selected);
 
